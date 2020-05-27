@@ -1,3 +1,5 @@
+import * as actionTypes from './actionTypes';
+
 const initialState = {
   items: {
     1: { text: "Finish homework", completed: false },
@@ -9,7 +11,7 @@ export default (state = initialState, action) => {
   const newState = { ...state };
 
   switch (action.type) {
-    case "ADD":
+    case actionTypes.ADD:
       const id = Math.floor(Math.random() * 100000);
       newState.items[id] = {
         text: action.text,
@@ -17,12 +19,12 @@ export default (state = initialState, action) => {
       };
       return newState;
 
-    case "TOGGLE":
+    case actionTypes.TOGGLE:
       newState.items[action.id].completed = !newState.items[action.id]
         .completed;
       return newState;
 
-    case "DELETE":
+    case actionTypes.DELETE:
       delete newState.items[action.id];
       return newState;
 
