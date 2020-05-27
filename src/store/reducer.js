@@ -14,10 +14,7 @@ export default (state = initialState, action) => {
         ...state,
         items: {
           ...state.items,
-          [Math.floor(Math.random() * 100000)]: {
-            text: action.text,
-            completed: false,
-          },
+          [action.id]: action.item,
         },
       };
 

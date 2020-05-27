@@ -4,8 +4,8 @@ export const load = (dispatch, items) => {
   dispatch({ type: actionTypes.LOAD, items });
 }
 
-export const add = (dispatch, text) => {
-  dispatch({ type: actionTypes.ADD, text: text });
+export const add = (dispatch, id, item) => {
+  dispatch({ type: actionTypes.ADD, id, item });
 }
 
 export const toggle = (dispatch, id, completed) => {

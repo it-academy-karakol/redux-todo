@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import classes from "./NewItem.module.css";
-import { add } from "../../store/actions";
+import { addItem } from "../../store/api";
 
 export default () => {
   const dispatch = useDispatch();
@@ -9,7 +9,7 @@ export default () => {
   function formSubmit(event) {
     const data = new FormData(event.target);
 
-    add(dispatch, data.get("text"));
+    addItem(dispatch, { text: data.get("text"), completed: false });
 
     event.preventDefault();
   }
