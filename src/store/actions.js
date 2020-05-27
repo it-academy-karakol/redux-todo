@@ -1,5 +1,9 @@
 import * as actionTypes from "./actionTypes";
 
+export const load = (dispatch, items) => {
+  dispatch({ type: actionTypes.LOAD, items });
+}
+
 export const add = (dispatch, text) => {
   dispatch({ type: actionTypes.ADD, text: text });
 }

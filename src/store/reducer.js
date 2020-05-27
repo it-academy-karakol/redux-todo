@@ -1,11 +1,14 @@
 import * as actionTypes from "./actionTypes";
 
 const initialState = {
-  items: null,
+  items: {},
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case actionTypes.LOAD:
+      return { ...state, items: action.items };
+
     case actionTypes.ADD:
       return {
         ...state,
