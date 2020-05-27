@@ -9,7 +9,7 @@ export default ({ id, completed, children }) => {
   return (
     <li className={classes.Item}>
       <span
-        onClick={() => toggle(dispatch, id)}
+        onClick={() => toggle(dispatch, id, !completed)}
         className={completed ? classes.completed : null}
       >
         {children}
