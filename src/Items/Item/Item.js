@@ -1,8 +1,7 @@
 import React from "react";
 import classes from "./Item.module.css";
 import { useDispatch } from "react-redux";
-import { toggle, remove } from "../../store/actions";
-import { toggleItem } from "../../store/api";
+import { toggleItem, removeItem } from "../../store/api";
 
 export default ({ id, completed, text }) => {
   const dispatch = useDispatch();
@@ -15,7 +14,7 @@ export default ({ id, completed, text }) => {
       >
         {text}
       </span>
-      <button onClick={() => remove(dispatch, id)}>x</button>
+      <button onClick={() => removeItem(dispatch, id)}>x</button>
     </li>
   );
 };
