@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Item.module.css";
 import { useDispatch } from "react-redux";
-import * as actionTypes from "../../store/actionTypes";
+import { toggle, remove } from "../../store/actions";
 
 export default ({ id, completed, children }) => {
   const dispatch = useDispatch();
@@ -9,12 +9,12 @@ export default ({ id, completed, children }) => {
   return (
     <li className={classes.Item}>
       <span
-        onClick={() => dispatch({ type: actionTypes.TOGGLE, id })}
+        onClick={() => toggle(dispatch, id)}
         className={completed ? classes.completed : null}
       >
         {children}
       </span>
-      <button onClick={() => dispatch({ type: actionTypes.REMOVE, id })}>x</button>
+      <button onClick={() => remove(dispatch, id)}>x</button>
     </li>
   );
 };
