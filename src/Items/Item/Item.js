@@ -14,7 +14,7 @@ export default ({ id, completed, children }) => {
       >
         {children}
       </span>
-      <button onClick={() => dispatch({ type: actionTypes.DELETE, id })}>x</button>
+      <button onClick={() => dispatch({ type: actionTypes.REMOVE, id })}>x</button>
     </li>
   );
 };

@@ -24,7 +24,7 @@ export default (state = initialState, action) => {
         .completed;
       return newState;
 
-    case actionTypes.DELETE:
+    case actionTypes.REMOVE:
       delete newState.items[action.id];
       return newState;
 
