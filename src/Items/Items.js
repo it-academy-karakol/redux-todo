@@ -9,11 +9,7 @@ export default () => {
 
   let itemsOutput = Object.keys(items || {})
     .filter(id => items[id] !== null)
-    .map((id) => (
-      <Item key={id} id={id} completed={items[id].completed}>
-        {items[id].text}
-      </Item>
-    ));
+    .map((id) => <Item key={id} id={id} {...items[id]} />);
   if (itemsOutput.length < 1) {
     itemsOutput = <li>No items</li>
   }
