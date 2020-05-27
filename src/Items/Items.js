@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { loadItems } from "../store/api";
 import NewItem from "./NewItem/NewItem";
 import Item from "./Item/Item";
 import classes from "./Items.module.css";
-import { useSelector, useDispatch } from "react-redux";
-import { loadItems } from "../store/api";
 
 export default () => {
   const dispatch = useDispatch();

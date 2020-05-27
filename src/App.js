@@ -4,6 +4,6 @@ import classes from "./App.module.css";
 
 export default () => (
   <div className={classes.App}>
-      <Items />
+    <Items />
   </div>
 );

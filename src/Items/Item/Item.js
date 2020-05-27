@@ -1,7 +1,7 @@
 import React from "react";
-import classes from "./Item.module.css";
 import { useDispatch } from "react-redux";
 import { toggleItem, removeItem } from "../../store/api";
+import classes from "./Item.module.css";
 
 export default ({ id, completed, text }) => {
   const dispatch = useDispatch();

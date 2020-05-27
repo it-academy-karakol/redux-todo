@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import classes from "./NewItem.module.css";
 import { addItem } from "../../store/api";
+import classes from "./NewItem.module.css";
 
 export default () => {
   const dispatch = useDispatch();
